@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# Author - Bamidele Adefolaju
-
 def uppercase(str):
     """Print a string in uppercase."""
     for c in str:
@@ -8,3 +6,6 @@ def uppercase(str):
             c = chr(ord(c) - 32)
         print("{}".format(c), end="")
     print("")
+
+uppercase("best")
+uppercase("Best School 98 Battery street")
