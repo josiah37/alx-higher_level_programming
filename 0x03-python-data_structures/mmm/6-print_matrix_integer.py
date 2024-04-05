@@ -25,11 +25,11 @@ for row in matrix:
 def print_matrix_integer(matrix=[[]]):
     for row in range(len(matrix)):
         for colmn in range(len(matrix[row])):
-                print(matrix[row][colmn], end = " ")
+                print(matrix[row][colmn], end = "")
                 if colmn < len(matrix[row])-1:
 #                       print(matrix[row][colmn], end = "")
                        print(" ", end="")
-        print()
+        print("")
            
 
 
