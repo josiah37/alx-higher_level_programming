@@ -1,0 +1,42 @@
+This is a tesst file for 1-my_list.py.
+
+adding the parent directory to the system path
+==============================================
+import sys
+sys.path.append("..") #adding the parent dir
+from my_list import MyList
+
+
+normal case:
+- - - - - - - - - - - - - - - -
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.append(4)
+>>> print(my_list)
+[1, 3, 5, 4]
+>>> my_list.print_sorted()
+[1, 3, 4, 5]
+[1, 3, 4, 5]
+
+case 1: if non int is passed
+- - - - - - - - - - - - - - - -
+>>> my_list.append('h')
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+case 2: if a keyword is passed
+ - - - - - - - - - - - - - - - -
+>>> my_list.append(str)
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'type' and 'int'
+
+case 3: if an empty list is passed
+- - - - - - - - - - - - - - - -
+>>> ml = MyList()
+>>> ml.print_sorted()
+[]
+[]
