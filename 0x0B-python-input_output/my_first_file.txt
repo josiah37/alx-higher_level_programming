@@ -1,1 +1,10 @@
-This School is so cool!
+"This School is so cool!\n"
+line222
+i need to focus more3
+yeah avoid distruction 4
+i am adding the line at the end 
+ and also this
+i am adding the line at the end 
+ and also thisi am adding the line at the end 
+ and also this agian
+This is a test

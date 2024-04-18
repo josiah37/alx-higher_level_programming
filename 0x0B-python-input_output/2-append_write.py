@@ -21,3 +21,7 @@ def append_write(filename="", text=""):
     except Exception as ex:
         print(f"Error appending to the file: {ex}")
         return 0
+
+nb_characters_added = append_write("file_append.txt", "This School is so cool!\n")
+print(nb_characters_added)
+
