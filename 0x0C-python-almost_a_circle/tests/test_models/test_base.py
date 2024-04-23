@@ -1,6 +1,8 @@
 import unittest
-#import models.base.Base
+# import models.base.Base
 from models.base import Base
+
+
 class TestBaseClass(unittest.TestCase):
     def test_id(self):
         b1 = Base()

@@ -1,8 +1,8 @@
 """ this is a test file for for the class rectangle"""
 import unittest
-#import sys
-#import io
-#from models.base import Base
+# import sys
+# import io
+# from models.base import Base
 from models.rectangle import Rectangle
 
 
@@ -93,7 +93,6 @@ class Test_for_invlaid_cases(unittest.TestCase):
         avoid duplication and creating many objects
         """
         self.rect = Rectangle(4, 3, 2, 1)
-
 
     def test_invalid_x_and_y(self):
         with self.assertRaises(TypeError):
