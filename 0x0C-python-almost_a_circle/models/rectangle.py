@@ -98,10 +98,8 @@ class Rectangle(Base):
         return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
 {self.width}/{self.height}")
 
-    """
     def update(self, *args):
         x = [self.id, self.width, self.height, self.x, self.y]
         for index, arg in enumerate(args):
             x[index] = arg
         self.id, self.width, self.height, self.x, self.y = x
-    """
