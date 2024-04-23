@@ -21,10 +21,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
-            return (self.__width)
+        """ to get the width of the rectangle"""
+        return (self.__width)
 
     @width.setter
     def width(self,value):
+        """ to set the width of the rectangle"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -35,9 +37,10 @@ class Rectangle(Base):
     @property
     
     def height(self):
-            return (self.__height)
-    @height.setter
+        """ to get and set the height of the rectangle"""
+        return (self.__height)
     
+    @height.setter
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -48,6 +51,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """ to get and set the width of the rectangle"""
         return (self.__x)
     @x.setter
     def x(self,value):
@@ -60,6 +64,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """ to get and set the x axis of the rectangle"""
         return (self.__y)
     @y.setter
     def y(self,value):
@@ -70,4 +75,5 @@ class Rectangle(Base):
         else:
             self.__y = value
     def area(self):
+        """ returns the area of a rectangle"""
         return(self.__height * self.__width)
