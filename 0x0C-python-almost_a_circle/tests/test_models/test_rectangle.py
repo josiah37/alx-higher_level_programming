@@ -1,5 +1,8 @@
 """ this is a test file for for the class rectangle"""
 import unittest
+#import sys
+#import io
+#from models.base import Base
 from models.rectangle import Rectangle
 
 
