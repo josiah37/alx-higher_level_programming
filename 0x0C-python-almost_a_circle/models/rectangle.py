@@ -82,3 +82,23 @@ class Rectangle(Base):
     def area(self):
         """Return the area of the rectangle."""
         return (self.__height * self.__width)
+
+    def display(self):
+        """prints rectangles(#) based on the length and width"""
+        if self.y > 0:
+            print("" * self.y)
+        for rows in range(self.height):
+            print(" " * self.x, end="")
+            for width in range(self.width):
+                print("#", end="")
+            print("")
+
+    def __str__(self):
+        return (f"[Rectangle] ({self.id})\
+{self.x}/{self.y} - {self.width}/{self.height}")
+
+    def update(self, *args):
+        x = [self.id, self.width, self.height, self.x, self.y]
+        for index, arg in enumerate(args):
+            x[index] = arg
+        self.id, self.width, self.height, self.x, self.y = x
