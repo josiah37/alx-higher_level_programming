@@ -13,6 +13,11 @@ class Rectangle(Base):
             y (int): 
             id (int): The identity for the new Rectangle.
         """
+        if x < 0:
+            raise ValueError("x must be > 0")
+        
+        if y < 0:
+            raise ValueError("y must be > 0")
         super().__init__(id=id)
         self.width = width
         self.height = height
