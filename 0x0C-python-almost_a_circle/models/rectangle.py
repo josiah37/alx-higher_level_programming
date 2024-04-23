@@ -86,7 +86,8 @@ class Rectangle(Base):
     def display(self):
         """prints rectangles(#) based on the length and width"""
         if self.y > 0:
-            print("" * self.y)
+            for i in range(self.y):
+                print("" * self.y)
         for rows in range(self.height):
             print(" " * self.x, end="")
             for width in range(self.width):
