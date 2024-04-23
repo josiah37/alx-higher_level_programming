@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ THIS IS A MODULE THAT DIFINES A CALSS THAT INHERIT FROM BASE CLASS"""
-from models.base import Base
+from .base import Base
 
 class Rectangle(Base):
     """Represent a rectangle."""
