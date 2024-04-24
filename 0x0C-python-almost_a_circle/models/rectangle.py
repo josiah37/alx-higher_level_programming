@@ -98,8 +98,16 @@ class Rectangle(Base):
         return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
 {self.width}/{self.height}")
 
+    """
+    # works but the cheker did'nt check it
     def update(self, *args):
         x = [self.id, self.width, self.height, self.x, self.y]
         for index, arg in enumerate(args):
             x[index] = arg
         self.id, self.width, self.height, self.x, self.y = x
+    """
+
+    def update(self, *args):
+        attributes = ["id", "width", "height", "x", "y"]
+        for attr_name, arg in zip(attributes, args):
+            setattr(self, attr_name, arg)
