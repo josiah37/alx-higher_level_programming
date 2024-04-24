@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """This is a module that defines a class that inherits from the Base class."""
 from models.base import Base
 
@@ -99,7 +99,9 @@ class Rectangle(Base):
 {self.width}/{self.height}")
 
     """
-    # works but the cheker did'nt check it
+works but the cheker did'nt check it(updated: i realise\
+ there None is appearing)
+
     def update(self, *args):
         x = [self.id, self.width, self.height, self.x, self.y]
         for index, arg in enumerate(args):
@@ -107,34 +109,22 @@ class Rectangle(Base):
         self.id, self.width, self.height, self.x, self.y = x
     """
     """
+    i lirally dont know why this doesnt work it is exactly the same as z nxt
     def update(self, *args):
         attributes = ["id", "width", "height", "x", "y"]
         for attr_name, arg in zip(attributes, args):
-            setattr(self, attr_name, arg)
+            if arg is None:
+                #self.id = self.id + 1
+                 self.__init__(self.width, self.height, self.x, self.y)
+            if arg is not None:
+                setattr(self, attr_name, arg)
     """
+
     def update(self, *args):
-        """ updates the attribute of the rectangle class"""
-        """
-        _len = len(args)
-        for , j in enumerate(args):
-            if _len == 0:
-                if arg is None:
-                    self.__init__(self.width, self.height, self.x, self.y)
-                else:
-                    self.id = arg
-            elif i == 1:
-                self.width = args
-            elif i == 2:
-                self.height = args
-            elif i == 3:
-                self.x = args
-            elif i == 4:
-                self.y = args
-        """
         if args and len(args) != 0:
-            #a = 0
+            a = 0
             for a, arg in enumerate(args):
-                if a == 0:    
+                if a == 0:
                     if arg is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
