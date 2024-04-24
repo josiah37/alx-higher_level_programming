@@ -106,8 +106,9 @@ class Rectangle(Base):
             x[index] = arg
         self.id, self.width, self.height, self.x, self.y = x
     """
-
+    """
     def update(self, *args):
         attributes = ["id", "width", "height", "x", "y"]
         for attr_name, arg in zip(attributes, args):
             setattr(self, attr_name, arg)
+    """
