@@ -132,9 +132,9 @@ class Rectangle(Base):
                 self.y = args
         """
         if args and len(args) != 0:
-            a = 0
-            for arg in args:
-                if a == 0:
+            #a = 0
+            for a, arg in enumerate(args):
+                if a == 0:    
                     if arg is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
@@ -147,4 +147,4 @@ class Rectangle(Base):
                     self.x = arg
                 elif a == 4:
                     self.y = arg
-                a += 1
+                #a += 1
