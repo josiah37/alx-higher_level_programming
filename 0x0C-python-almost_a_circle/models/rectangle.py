@@ -112,7 +112,7 @@ class Rectangle(Base):
         for attr_name, arg in zip(attributes, args):
             setattr(self, attr_name, arg)
     """
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ updates the attribute of the rectangle class"""
         """
         _len = len(args)
@@ -148,3 +148,18 @@ class Rectangle(Base):
                 elif a == 4:
                     self.y = arg
 #               #a += 1
+        if kwargs:
+            for k, v in kwargs.items():
+                if k == "id":
+                    if v is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = v
+                if k == "height":
+                    self.height = v
+                if k == "width":
+                    self.width = v
+                if k == "x":
+                    self.x = v
+                if k == "y":
+                    self.y = v
