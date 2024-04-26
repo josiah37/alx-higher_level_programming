@@ -183,7 +183,7 @@ class Rectangle(Base):
             "id": self.id,
             "size": self.width
         }
-        #self._to_dict_called = False  # Reset the flagself._to_dict_called = True
+        self._to_dict_called = False  # Reset the flagself._to_dict_called = True
         return dict_representation
 
 
