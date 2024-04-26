@@ -21,6 +21,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+        self._to_dict_called = False
 
     @property
     def width(self):
@@ -163,3 +164,34 @@ class Rectangle(Base):
                     self.x = v
                 if k == "y":
                     self.y = v
+
+    def to_dictionary(self):
+        """Return the dictionary representation of a Rectangle."""
+        '''
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
+        '''
+        self._to_dict_called = True
+        dict_representation = {
+            "x": self.x,
+            "y": self.y,
+            "id": self.id,
+            "size": self.width
+        }
+        self._to_dict_called = False  # Reset the flagself._to_dict_called = True
+        return dict_representation
+
+
+    def __str__(self):
+        """Return the print() and str() representation of the Rectangle."""
+        if self._to_dict_called:
+            return "({}, {}, {}, {})".format(self.x, self.y, self.id,
+                                             self.width)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
